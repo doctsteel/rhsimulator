@@ -57,7 +57,7 @@ export class AppModule {
       domain: 'doctsteel.auth0.com',
       audience: 'rhsimulator.ayy.lmao',
       clientID: 'OYOHsP1g6v6X8vxjH2oDZyKExYoglf3p',
-      redirectUri: 'http://localhost:4200/callback',
+      redirectUri: 'https://doctsteel.github.io/rhsimulator/callback',
       scope: 'openid profile manage:resumes'
     });
   }
