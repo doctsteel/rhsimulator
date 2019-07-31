@@ -1,27 +1,40 @@
-# RHSimulator
+# RH Simulator!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+Olá!
+Esse é meu projeto da etapa de seleção para a vaga de dev full-stack da Reflow.
+Você consegue encontrar o front-end desse projeto hostado no próprio github:
+https://doctsteel.github.io/rhsimulator/
 
-## Development server
+# Estrutura do projeto
+Decidi dividir a estrutura do projeto em dois repositórios diferentes: o back e o front-end.
+O back-end usa **Flask, Auth0,  SQLAlchemy e PostgreSQL**.
+O front-end usa **Angular e Bootstrap**.
+## Front-end
+		
+O front-end em angular usou 5 componentes:
+- 'app.component.ts'
+- '*resume-form.component.ts*'
+- 'resumes.component.ts'
+- 'visualizer.component.ts'
+- 'callbck.component.ts'
+	
+O app.component estabelece a página central do programa, resumes.component exibe a listagem de currículos, resumes-form.component segura a lógica da busca dinâmica da página (acredito que foi o mais difícil de implementar!), callbck.component consiste na compatibilidade com o Auth0 pra logar cada usuário ao site e o visualizer é a exibição e edição de currículos existentes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Desafios encontrados
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Bugs
+	- Problema na redireção do callback feito pelo auth0. As vezes a tela não é atualizada com a exibição dos currículos e da busca...
+	- Nenhuma exibição de erros de autenticação: falta dizer ao usuário quando o token expira ou quando o usuário não tem a autoridade pra realizar alguma ação.
+- Dificuldades
+	- Implementar a API de autenticação de usuário do Auth0 foi um saco, ainda mais no angular.
+	- Limitações de programar em um notebook relativamente velho.
+- O que falta
+	- Testes automatizados.
+	- Páginas de profile.
+	- Opções de buscas mais específicas
+	- Uma edição de currículo mais completa
+	- Upload de documentos! Dado mais tempo, eu queria implementar alguma forma de verificar um PDF de currículo e captar dados diretamente dele!
+	- 
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
